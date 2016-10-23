@@ -5,12 +5,12 @@ def tail(string):
     return string[1:]
 
 
-def revert(string):
+def reverse(string):
     return string[::-1]
 
 
 def mirror(string):
-    return string + tail(revert(string))
+    return string + tail(reverse(string))
 
 
 def diamond_letters(letter):
@@ -28,9 +28,9 @@ def erease_other_letters(letter, string):
 
 def diamond_lines(letter):
     lines = []
-    letters = revert(diamond_letters(letter))
+    letters = reverse(diamond_letters(letter))
 
-    for letter in revert(letters):
+    for letter in reverse(letters):
         partial_line = erease_other_letters(letter, letters)
         line = mirror(partial_line)
         lines.append(line)
