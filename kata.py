@@ -1,2 +1,5 @@
+def revert(string):
+    return string[::-1]
+
 def simetrize(string):
-    return string + string[::-1][1:]
+    return string + revert(string)[1:]
