@@ -1,9 +1,10 @@
 import unittest
 from kata import (
     diamond_letters,
-    erease,
-    mirror,
     diamond_lines,
+    erease,
+    erease_other_letters,
+    mirror,
 )
 
 
@@ -53,3 +54,10 @@ class DiamondLinesTests(unittest.TestCase):
             'b b',
             ' a ',
         ])
+
+
+class EreaseOtherLettersTests(unittest.TestCase):
+
+    def test_it_replace_other_letters_by_spaces(self):
+        result = erease_other_letters('b', 'abc')
+        self.assertEqual(result, ' b ')

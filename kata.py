@@ -23,6 +23,14 @@ def erease(chars, string):
 
     return string
 
+
+def erease_other_letters(keeped_letter, string):
+    return ''.join(
+            map(
+                lambda letter: letter if letter == keeped_letter else ' ',
+                string))
+
+
 def diamond_lines(letter):
     lines = []
     letters = revert(diamond_letters(letter))
