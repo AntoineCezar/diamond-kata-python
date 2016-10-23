@@ -24,11 +24,12 @@ def erease(chars, string):
     return string
 
 
-def erease_other_letters(keeped_letter, string):
-    return ''.join(
-            map(
-                lambda letter: letter if letter == keeped_letter else ' ',
-                string))
+def erease_when_not(letter):
+    return lambda candidate: candidate if candidate == letter else ' '
+
+
+def erease_other_letters(letter, string):
+    return ''.join(map(erease_when_not(letter), string))
 
 
 def diamond_lines(letter):
