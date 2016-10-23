@@ -14,7 +14,8 @@ def mirror(string):
 
 
 def diamond_letters(letter):
-    return ascii_letters[:ascii_letters.find(letter) + 1]
+    last_letter_position = ascii_letters.find(letter) + 1
+    return ascii_letters[:last_letter_position]
 
 
 def erease_when_not(letter):
