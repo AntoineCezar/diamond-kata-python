@@ -24,7 +24,7 @@ class DiamondLettersTests(unittest.TestCase):
         self.assertEqual(result, 'abc')
 
 
-class EreaseTest(unittest.TestCase):
+class EreaseTests(unittest.TestCase):
 
     def test_it_replace_single_letter_by_space(self):
         result = erease('b', 'abc')
