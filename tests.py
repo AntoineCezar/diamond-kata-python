@@ -2,7 +2,6 @@ import unittest
 from kata import (
     diamond_letters,
     diamond_lines,
-    erease,
     erease_other_letters,
     mirror,
 )
@@ -24,21 +23,6 @@ class DiamondLettersTests(unittest.TestCase):
     def test_c_gives_abc(self):
         result = diamond_letters('c')
         self.assertEqual(result, 'abc')
-
-
-class EreaseTests(unittest.TestCase):
-
-    def test_it_replace_single_letter_by_space(self):
-        result = erease('b', 'abc')
-        self.assertEqual(result, 'a c')
-
-    def test_it_replace_multiple_letters_by_spaces(self):
-        result = erease('bc', 'abc')
-        self.assertEqual(result, 'a  ')
-
-    def test_it_replace_multiple_separated_letters_by_spaces(self):
-        result = erease('ac', 'abc')
-        self.assertEqual(result, ' b ')
 
 
 class DiamondLinesTests(unittest.TestCase):

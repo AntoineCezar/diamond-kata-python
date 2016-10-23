@@ -17,13 +17,6 @@ def diamond_letters(letter):
     return ascii_letters[:ascii_letters.find(letter) + 1]
 
 
-def erease(chars, string):
-    for char in chars:
-        string = string.replace(char, ' ')
-
-    return string
-
-
 def erease_when_not(letter):
     return lambda candidate: candidate if candidate == letter else ' '
 
