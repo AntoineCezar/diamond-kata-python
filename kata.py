@@ -22,3 +22,14 @@ def erease(chars, string):
         string = string.replace(char, ' ')
 
     return string
+
+def diamond_lines(letter):
+    lines = []
+    letters = revert(diamond_letters(letter))
+
+    for letter in revert(letters):
+        to_erease = letters.replace(letter, '')
+        line = mirror(erease(to_erease, letters))
+        lines.append(line)
+
+    return mirror(lines)

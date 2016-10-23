@@ -3,6 +3,7 @@ from kata import (
     diamond_letters,
     erease,
     mirror,
+    diamond_lines,
 )
 
 
@@ -37,3 +38,18 @@ class EreaseTests(unittest.TestCase):
     def test_it_replace_multiple_separated_letters_by_spaces(self):
         result = erease('ac', 'abc')
         self.assertEqual(result, ' b ')
+
+
+class DiamondLinesTests(unittest.TestCase):
+
+    def test_a_diamond(self):
+        result = diamond_lines('a')
+        self.assertEqual(result, ['a'])
+
+    def test_b_diamond(self):
+        result = diamond_lines('b')
+        self.assertEqual(result, [
+            ' a ',
+            'b b',
+            ' a ',
+        ])
