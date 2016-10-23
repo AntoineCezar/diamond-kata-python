@@ -1,9 +1,9 @@
 import unittest
-from kata import simetrize
+from kata import mirror
 
 
-class SymetrizeTests(unittest.TestCase):
+class MirrorTests(unittest.TestCase):
 
-    def test_it_return_simetrized_string_with_last_char_as_pivot(self):
-        simetrized = simetrize('  a')
-        self.assertEqual(simetrized, '  a  ')
+    def test_it_return_mirrored_string_with_last_char_as_pivot(self):
+        mirrored = mirror('  a')
+        self.assertEqual(mirrored, '  a  ')

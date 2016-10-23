@@ -4,5 +4,5 @@ def tail(string):
 def revert(string):
     return string[::-1]
 
-def simetrize(string):
+def mirror(string):
     return string + tail(revert(string))
