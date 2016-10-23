@@ -37,8 +37,8 @@ def diamond_lines(letter):
     letters = revert(diamond_letters(letter))
 
     for letter in revert(letters):
-        to_erease = letters.replace(letter, '')
-        line = mirror(erease(to_erease, letters))
+        partial_line = erease_other_letters(letter, letters)
+        line = mirror(partial_line)
         lines.append(line)
 
     return mirror(lines)
