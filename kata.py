@@ -36,3 +36,10 @@ def diamond_lines(letter):
         lines.append(line)
 
     return mirror(lines)
+
+
+if __name__ == "__main__":
+    letter = input('letter? ')
+
+    for line in diamond_lines(letter):
+        print(line)
