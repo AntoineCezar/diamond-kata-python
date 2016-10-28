@@ -18,12 +18,12 @@ def diamond_letters(letter):
     return ascii_letters[:last_letter_position]
 
 
-def erease_when_not(letter):
+def erase_when_not(letter):
     return lambda candidate: candidate if candidate == letter else ' '
 
 
-def erease_other_letters(letter, string):
-    return ''.join(map(erease_when_not(letter), string))
+def erase_other_letters(letter, string):
+    return ''.join(map(erase_when_not(letter), string))
 
 
 def diamond_lines(letter):
@@ -31,7 +31,7 @@ def diamond_lines(letter):
     letters = reverse(diamond_letters(letter))
 
     for letter in reverse(letters):
-        partial_line = erease_other_letters(letter, letters)
+        partial_line = erase_other_letters(letter, letters)
         line = mirror(partial_line)
         lines.append(line)
 
